@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Economía Política - Guía de Estudio (Lecciones I-V)</title>
+<title>Economia Politica - Guia de Estudio (Lecciones I-V)</title>
 <style>
   :root{
     --azul:#1a3d63;
@@ -12,6 +12,7 @@
     --fondo:#f6f4ee;
     --card:#ffffff;
     --texto:#222;
+    --rojo:#e53935;
   }
   *{box-sizing:border-box;}
   body{
@@ -76,6 +77,7 @@
     padding:16px 18px;
     margin:16px 0;
     border-left:4px solid var(--azul2);
+    position:relative;
   }
   .concepto h3{
     margin:0 0 8px;
@@ -119,8 +121,31 @@
     font-size:0.75rem;
     margin-bottom:8px;
   }
+  .nuevo{
+    border-left:4px solid var(--rojo) !important;
+    background:#fff5f5 !important;
+  }
+  .nuevo::before{
+    content:"\2605 EXAMEN";
+    position:absolute;
+    top:-11px;
+    right:14px;
+    background:var(--rojo);
+    color:white;
+    font-size:0.68rem;
+    font-weight:700;
+    padding:3px 10px;
+    border-radius:10px;
+    letter-spacing:0.5px;
+    box-shadow:0 2px 4px rgba(0,0,0,0.2);
+  }
+  mark.destacado{
+    background:#ffe9a8;
+    padding:1px 5px;
+    border-radius:4px;
+    font-weight:600;
+  }
 
-  /* QUIZ */
   #quiz .pregunta{
     background:#fbf8f0;
     border:1px solid #eee0bd;
@@ -191,282 +216,328 @@
     box-shadow:0 3px 8px rgba(0,0,0,0.3);
     font-size:1.3rem;
   }
+  .leyenda{
+    display:flex;
+    align-items:center;
+    gap:8px;
+    background:#fff5f5;
+    border:1px dashed var(--rojo);
+    border-radius:10px;
+    padding:10px 16px;
+    margin-bottom:20px;
+    font-size:0.9rem;
+  }
+  .leyenda .tag{
+    background:var(--rojo);
+    color:white;
+    font-size:0.68rem;
+    font-weight:700;
+    padding:3px 10px;
+    border-radius:10px;
+  }
 </style>
 </head>
 <body>
 
 <header>
-  <h1>📘 Economía Política</h1>
-  <p>Guía de estudio — Lecciones I a V</p>
-  <p style="font-size:0.85rem;">Basado en: <em>Economía Política</em>, Juan Bautista Rivarola Paoli, 8ª Edición, 2010 (Asunción, Paraguay)</p>
+  <h1>Economia Politica</h1>
+  <p>Guia de estudio - Lecciones I a V</p>
+  <p style="font-size:0.85rem;">Basado en: <em>Economia Politica</em>, Juan Bautista Rivarola Paoli, 8a Edicion, 2010 (Asuncion, Paraguay)</p>
 </header>
 
 <nav>
-  <a href="#leccion1">Lección I</a>
-  <a href="#leccion2">Lección II</a>
-  <a href="#leccion3">Lección III</a>
-  <a href="#leccion4">Lección IV</a>
-  <a href="#leccion5">Lección V</a>
-  <a href="#quiz">Autoevaluación</a>
+  <a href="#leccion1">Leccion I</a>
+  <a href="#leccion2">Leccion II</a>
+  <a href="#leccion3">Leccion III</a>
+  <a href="#leccion4">Leccion IV</a>
+  <a href="#leccion5">Leccion V</a>
+  <a href="#quiz">Autoevaluacion</a>
 </nav>
 
 <main>
 
 <section id="intro">
-  <h2>Sobre esta guía</h2>
-  <p>Este material resume y explica, en base al libro <strong>"Economía Política"</strong> de <strong>Juan Bautista Rivarola Paoli</strong> (8ª edición, revisada y actualizada, Ediciones y Arte S.A., Asunción, 2010, 377 páginas), las cinco primeras lecciones del programa de la materia, tal como se dicta en la Facultad de Derecho y Ciencias Sociales de la Universidad Nacional de Asunción. El libro fue escrito con el objetivo declarado por el autor de ofrecer "explicaciones sencillas y al alcance de la comprensión" del estudiante, evitando la dificultad típica de la teoría económica abstracta.</p>
+  <h2>Sobre esta guia</h2>
+  <p>Este material resume y explica, en base al libro <strong>"Economia Politica"</strong> de <strong>Juan Bautista Rivarola Paoli</strong> (8a edicion, revisada y actualizada, Ediciones y Arte S.A., Asuncion, 2010, 377 paginas), las cinco primeras lecciones del programa de la materia, tal como se dicta en la Facultad de Derecho y Ciencias Sociales de la Universidad Nacional de Asuncion.</p>
+  <div class="leyenda">
+    <span class="tag">&#9733; EXAMEN</span>
+    <span>Estos recuadros marcan los temas de mayor probabilidad de examen que agregaste o ampliaste en tu ultimo pedido: bienes libres, problemas basicos completos (que, como, cuando, para quien), metodos deductivo/inductivo, escuelas pre-cientificas/clasicas/cientificas, mercantilismo, fisiocracia, economia social de mercado, teoria del valor-trabajo, division didactica y ley de rendimientos decrecientes.</span>
+  </div>
 </section>
 
 <!-- LECCION I -->
 <section id="leccion1">
-  <span class="badge">LECCIÓN I</span>
-  <h2>Noción primaria de la Economía</h2>
+  <span class="badge">LECCION I</span>
+  <h2>Nocion primaria de la Economia</h2>
 
   <div class="concepto">
-    <h3>Etimología</h3>
-    <p>La palabra <strong>Economía</strong> proviene del griego <em>Oikonomia</em>, formado por <em>OIKOS</em> (casa) y <em>NOMOS</em> (ley), es decir, "administración de la casa familiar". Aristóteles ya la concebía como la ciencia del abastecimiento y el arte de la adquisición. En 1615, Antoine de Montchretien amplió el concepto al Estado en su obra <em>"Traité de l'économie politique"</em>, dando origen al término <strong>Economía Política</strong>, vigente hasta el siglo XIX. En 1890, con el libro de Alfred Marshall <em>"Principles of Economics"</em>, se difundió el uso simplificado de "Economía".</p>
+    <h3>Etimologia</h3>
+    <p>La palabra <strong>Economia</strong> proviene del griego <em>Oikonomia</em>, formado por <em>OIKOS</em> (casa) y <em>NOMOS</em> (ley), es decir, "administracion de la casa familiar". Aristoteles ya la concebia como la ciencia del abastecimiento y el arte de la adquisicion. En 1615, Antoine de Montchretien amplio el concepto al Estado en su obra <em>"Traite de l'economie politique"</em>, dando origen al termino <strong>Economia Politica</strong>, vigente hasta el siglo XIX. En 1890, con el libro de Alfred Marshall <em>"Principles of Economics"</em>, se difundio el uso simplificado de "Economia".</p>
   </div>
 
   <div class="concepto">
-    <h3>Definiciones clásicas de Economía</h3>
+    <h3>Definiciones clasicas de Economia</h3>
     <table>
-      <tr><th>Autor</th><th>Definición (resumida)</th></tr>
+      <tr><th>Autor</th><th>Definicion (resumida)</th></tr>
       <tr><td>Adam Smith</td><td>Descubrir las leyes que enriquecen al pueblo y al soberano.</td></tr>
-      <tr><td>Juan Bautista Say</td><td>Ciencia que explica cómo se forman, distribuyen y consumen las riquezas.</td></tr>
-      <tr><td>Federico Engels</td><td>Ciencia de las leyes que rigen la producción e intercambio de bienes materiales.</td></tr>
+      <tr><td>Juan Bautista Say</td><td>Ciencia que explica como se forman, distribuyen y consumen las riquezas.</td></tr>
+      <tr><td>Federico Engels</td><td>Ciencia de las leyes que rigen la produccion e intercambio de bienes materiales.</td></tr>
       <tr><td>Charles Gide</td><td>Estudia las relaciones humanas orientadas a satisfacer necesidades materiales.</td></tr>
-      <tr><td>Raymond Barre</td><td>Ciencia de la administración de recursos escasos frente a necesidades ilimitadas.</td></tr>
-      <tr><td>Stonier y Hague</td><td>Existe economía porque los bienes son escasos y deben repartirse.</td></tr>
-      <tr><td>Larroulet y Mochón</td><td>Estudia la asignación más conveniente de recursos escasos para lograr objetivos.</td></tr>
+      <tr><td>Raymond Barre</td><td>Ciencia de la administracion de recursos escasos frente a necesidades ilimitadas.</td></tr>
+      <tr><td>Stonier y Hague</td><td>Existe economia porque los bienes son escasos y deben repartirse.</td></tr>
+      <tr><td>Larroulet y Mochon</td><td>Estudia la asignacion mas conveniente de recursos escasos para lograr objetivos.</td></tr>
     </table>
-    <p>Todas convergen en una idea central: la <strong>escasez</strong> de recursos frente a necesidades ilimitadas es lo que da origen al problema económico.</p>
+  </div>
+
+  <div class="concepto nuevo">
+    <h3>Tipos de bienes: economicos y libres</h3>
+    <p>El libro distingue entre dos grandes categorias de bienes segun su relacion con la escasez:</p>
+    <ul>
+      <li><strong>Bienes economicos:</strong> son aquellos que, por ser <mark class="destacado">escasos</mark> en relacion a la necesidad que satisfacen, requieren esfuerzo humano (trabajo, produccion) para obtenerse. La Utilidad es la capacidad que tiene un bien de satisfacer necesidades humanas, ya sean materiales (la moneda, un automovil, una silla) o inmateriales (los servicios prestados por un medico, un profesor o un vigilante privado). Como explica el libro: "Para los economistas lo que interesa es que las necesidades sean satisfechas, con bienes economicos."</li>
+      <li><strong>Bienes libres:</strong> son aquellos que la naturaleza ofrece en cantidad suficiente para satisfacer las necesidades de todos sin que sea necesario un esfuerzo productivo para obtenerlos (por ejemplo, el aire atmosferico o la luz solar en su estado natural). No entran en el circuito de la produccion, distribucion e intercambio porque no son escasos: no generan "problema economico" en sentido estricto, a diferencia de los bienes economicos.</li>
+    </ul>
   </div>
 
   <div class="concepto">
-    <h3>Divisiones de la Economía Política</h3>
+    <h3>Divisiones de la Economia Politica</h3>
     <ul>
-      <li><strong>Producción:</strong> cómo se obtienen los bienes y servicios (naturaleza, trabajo, capital, empresa).</li>
-      <li><strong>Distribución (reparto):</strong> cómo se remuneran los factores que participan en la producción (renta, salario, interés, beneficio).</li>
-      <li><strong>Circulación:</strong> cómo los bienes y servicios pasan de una persona a otra (oferta, demanda, mercados, precios, crédito, dinero, bancos).</li>
+      <li><strong>Produccion:</strong> como se obtienen los bienes y servicios (naturaleza, trabajo, capital, empresa).</li>
+      <li><strong>Distribucion (reparto):</strong> como se remuneran los factores que participan en la produccion (renta, salario, interes, beneficio).</li>
+      <li><strong>Circulacion:</strong> como los bienes y servicios pasan de una persona a otra (oferta, demanda, mercados, precios, credito, dinero, bancos).</li>
       <li><strong>Consumo:</strong> el destino final de los bienes, orientado a satisfacer necesidades humanas.</li>
     </ul>
   </div>
 
-  <div class="concepto">
-    <h3>División didáctica de la ciencia económica</h3>
+  <div class="concepto nuevo">
+    <h3>Division didactica de la ciencia economica</h3>
+    <p>La Economia Politica es un cuerpo de conocimientos teoricos que, a pesar de su unidad, se estudia segun cuatro grandes divisiones didacticas:</p>
     <ul>
-      <li><strong>Microeconomía:</strong> estudia unidades elementales (individuo, empresa, consumidor) y sus decisiones.</li>
-      <li><strong>Macroeconomía:</strong> estudia grandes conjuntos (renta nacional, inversión global) usando estadística y econometría.</li>
-      <li><strong>Desarrollo económico:</strong> estudia el crecimiento y elevación del bienestar de una sociedad.</li>
-      <li><strong>Economía internacional:</strong> estudia el intercambio entre países, tasas de cambio, balanza de pagos, aranceles, organismos como el FMI y el Banco Mundial.</li>
+      <li><strong>Microeconomia:</strong> estudia unidades economicas elementales (el individuo productor, el empresario, el consumidor, las empresas), las micro decisiones y el comportamiento racional del productor y consumidor, asi como algunos tipos de mercados.</li>
+      <li><strong>Macroeconomia:</strong> estudia los grandes conjuntos de productores, consumidores y empresarios, un sector de actividades, la renta nacional, el ingreso nacional, la inversion global y las macro decisiones. Utiliza la Estadistica, la Contabilidad Social y la Econometria para analizar la estructura y funcionamiento de la economia nacional.</li>
+      <li><strong>Desarrollo economico:</strong> estudia el crecimiento armonico de la economia de una sociedad o pais, y las leyes basicas de elevacion del bienestar o calidad de vida de su poblacion.</li>
+      <li><strong>Economia internacional:</strong> estudia las relaciones de intercambio entre paises, sus mecanismos monetarios, las tasas de cambio extranjero, la balanza de pagos internacionales, las tarifas aduaneras, los mercados comunes y organismos como el Banco Mundial y el FMI.</li>
+    </ul>
+  </div>
+
+  <div class="concepto nuevo">
+    <h3>Problemas economicos basicos: que, como, cuando y para quien producir</h3>
+    <p>El objeto central de la ciencia economica es resolver el problema de la <strong>escasez</strong> de recursos frente a necesidades humanas ilimitadas. El libro plantea explicitamente tres problemas basicos en el Capitulo I, y en el indice de contenidos del Capitulo XII (Teoria de los Precios) los desarrolla en cuatro preguntas fundamentales que organizan todo el analisis de mercado:</p>
+    <ul>
+      <li><strong>&#191;Que y cuanto producir?</strong> Determinar el conjunto de bienes y servicios que deben producirse y en que cantidad.</li>
+      <li><strong>&#191;Como producir?</strong> Con que recursos, de que manera y con que procesos tecnicos.</li>
+      <li><strong>&#191;Cuando producir?</strong> El momento y el ritmo en que se destinan los recursos a cada actividad productiva, cuestion vinculada a la planificacion economica y a la respuesta de la oferta ante cambios en la demanda a corto y largo plazo.</li>
+      <li><strong>&#191;Para quien producir?</strong> A que segmentos sociales o personas se destinara la produccion, lo cual remite al problema de la distribucion del ingreso.</li>
+    </ul>
+    <p class="cita">"El analisis de la escasez de los recursos productivos y de las ilimitadas necesidades humanas... conduce a la conclusion de que la Economia es una ciencia volcada para tres tipos de problemas." <span class="autor">&mdash; Rossetti</span></p>
+  </div>
+
+  <div class="concepto">
+    <h3>Formas de organizacion economica</h3>
+    <ul>
+      <li><strong>Economia de mercado:</strong> basada en la libre oferta y demanda, la "mano invisible" de Adam Smith, minima intervencion estatal (laissez faire).</li>
+      <li><strong>Planificacion central:</strong> el Estado controla y dirige la produccion, inspirada en ideas marxistas; los medios de produccion se socializan.</li>
+      <li><strong>Sistemas mixtos:</strong> combinan sector publico y privado (capitalismo de Estado); es el modelo mas comun en la practica.</li>
     </ul>
   </div>
 
   <div class="concepto">
-    <h3>Objeto de la ciencia económica y problemas básicos</h3>
-    <p>El objeto central es resolver el problema de la <strong>escasez</strong> de recursos (tierra, trabajo, capital) frente a necesidades humanas ilimitadas. Según Lionel Robbins, la economía "estudia la conducta humana como relación entre fines y medios escasos". De ahí surgen tres problemas económicos básicos:</p>
-    <ul>
-      <li><strong>¿Qué producir?</strong> y en qué cantidad.</li>
-      <li><strong>¿Cómo producir?</strong> con qué recursos y procesos técnicos.</li>
-      <li><strong>¿Para quién producir?</strong> a qué personas o sectores se destina la producción.</li>
-    </ul>
-    <p class="cita">"El análisis de la escasez de los recursos productivos y de las ilimitadas necesidades humanas... conduce a la conclusión de que la Economía es una ciencia volcada para tres tipos de problemas." <span class="autor">— Rossetti</span></p>
-  </div>
-
-  <div class="concepto">
-    <h3>Formas de organización económica</h3>
-    <ul>
-      <li><strong>Economía de mercado:</strong> basada en la libre oferta y demanda, la "mano invisible" de Adam Smith, mínima intervención estatal (laissez faire).</li>
-      <li><strong>Planificación central:</strong> el Estado controla y dirige la producción, inspirada en ideas marxistas; los medios de producción se socializan.</li>
-      <li><strong>Sistemas mixtos:</strong> combinan sector público y privado (capitalismo de Estado); es el modelo más común en la práctica.</li>
-    </ul>
-  </div>
-
-  <div class="concepto">
-    <h3>La Economía como ciencia</h3>
-    <p>El conocimiento científico es <strong>causal</strong> (permite prever y actuar sobre los hechos) y <strong>metódico</strong> (sigue un orden de investigación repetible). La Economía observa la realidad, descubre relaciones de causa-efecto y elabora teorías, entendidas como "simplificaciones deliberadas de relaciones reales" que explican cómo funcionan esas relaciones.</p>
+    <h3>La Economia como ciencia</h3>
+    <p>El conocimiento cientifico es <strong>causal</strong> (permite prever y actuar sobre los hechos) y <strong>metodico</strong> (sigue un orden de investigacion repetible). La Economia observa la realidad, descubre relaciones de causa-efecto y elabora teorias, entendidas como "simplificaciones deliberadas de relaciones reales" que explican como funcionan esas relaciones.</p>
   </div>
 
   <div class="concepto">
     <h3>Relaciones con otras ciencias</h3>
     <ul>
-      <li><strong>Matemáticas:</strong> para cuantificar fenómenos económicos.</li>
-      <li><strong>Ciencias físicas y biológicas:</strong> auxilian en la producción y tecnología.</li>
-      <li><strong>Derecho:</strong> regula que el sistema económico sea justo (Derecho Tributario, Comercial, Laboral).</li>
-      <li><strong>Estado:</strong> vínculo con Derecho Constitucional y Administrativo.</li>
-      <li><strong>Sociología, Política, Antropología, Demografía:</strong> disciplinas hoy imprescindibles para entender la economía.</li>
+      <li><strong>Matematicas:</strong> para cuantificar fenomenos economicos.</li>
+      <li><strong>Ciencias fisicas y biologicas:</strong> auxilian en la produccion y tecnologia.</li>
+      <li><strong>Derecho:</strong> regula que el sistema economico sea justo (Derecho Tributario, Comercial, Laboral).</li>
+      <li><strong>Estado:</strong> vinculo con Derecho Constitucional y Administrativo.</li>
+      <li><strong>Sociologia, Politica, Antropologia, Demografia:</strong> disciplinas hoy imprescindibles para entender la economia.</li>
     </ul>
   </div>
 
-  <div class="concepto">
-    <h3>Métodos de la ciencia económica</h3>
+  <div class="concepto nuevo">
+    <h3>Metodos de investigacion: deductivo e inductivo</h3>
+    <p>La economia, como ciencia empirica, recurre al investigador que formula sus hipotesis mediante dos metodos complementarios:</p>
     <ul>
-      <li><strong>Método inductivo:</strong> parte de la observación de la realidad para obtener principios generales.</li>
-      <li><strong>Método deductivo:</strong> emplea deducciones lógicas a partir de axiomas, sin recurrir directamente a la observación.</li>
+      <li><strong>Metodo inductivo:</strong> parte de la <mark class="destacado">observacion de la realidad</mark> para obtener principios generales. A partir de la observacion de los fenomenos economicos concretos, se extraen hipotesis sobre el comportamiento economico.</li>
+      <li><strong>Metodo deductivo:</strong> emplea <mark class="destacado">deducciones logicas</mark> extraidas de axiomas a priori, sin recurrir directamente a la observacion empirica; con la deduccion se formulan teorias y leyes generales.</li>
     </ul>
-    <p>Ambos se complementan: se observan los hechos (inducción), se formulan hipótesis y luego se derivan teorías y leyes (deducción), que después deben contrastarse con la realidad.</p>
+    <p>Ambos se complementan: se observan los hechos (induccion), se formulan hipotesis y luego se derivan teorias y leyes (deduccion), que despues deben contrastarse nuevamente con la realidad para verificar su validez. El libro cita el ejemplo historico de la Escuela Clasica: sus teorias nacieron de observar la Revolucion Industrial en Inglaterra (metodo inductivo), mientras que seguidores de Ricardo como Senior y Cairnes consideraban a la Economia Politica como una ciencia puramente deductiva.</p>
   </div>
 
   <div class="concepto">
-    <h3>Estadística y Econometría</h3>
-    <p>La <strong>Estadística</strong> es, según Fisher, "la matemática aplicada al análisis de los datos numéricos de observación". Se divide en Estadística Matemática y Estadística Aplicada.</p>
-    <p>La <strong>Econometría</strong> es la rama de la ciencia económica que cuantifica y representa numéricamente las relaciones económicas, combinando Teoría Económica, Matemática y Estadística. Sus objetivos: medir variables, estimar parámetros, formular hipótesis y verificar teorías con datos reales.</p>
+    <h3>Estadistica y Econometria</h3>
+    <p>La <strong>Estadistica</strong> es, segun Fisher, "la matematica aplicada al analisis de los datos numericos de observacion". Se divide en Estadistica Matematica y Estadistica Aplicada.</p>
+    <p>La <strong>Econometria</strong> es la rama de la ciencia economica que cuantifica y representa numericamente las relaciones economicas, combinando Teoria Economica, Matematica y Estadistica.</p>
   </div>
 </section>
 
 <!-- LECCION II -->
 <section id="leccion2">
-  <span class="badge">LECCIÓN II</span>
-  <h2>Evolución de la Ciencia Económica</h2>
+  <span class="badge">LECCION II</span>
+  <h2>Evolucion de la Ciencia Economica</h2>
 
-  <div class="concepto">
-    <h3>Fases pre-científicas</h3>
-    <p>Antes de constituirse como ciencia sistemática, existieron reflexiones económicas dispersas desde la Antigüedad (Xenofonte, Aristóteles) y la Edad Media (pensamiento escolástico sobre el precio justo y la usura), sin un cuerpo teórico unificado.</p>
+  <div class="concepto nuevo">
+    <h3>Escuelas pre-cientificas, clasicas y cientificas</h3>
+    <p>El indice del libro (Capitulo II) organiza la evolucion del pensamiento economico en tres grandes etapas:</p>
+    <ul>
+      <li><strong>Fases pre-cientificas de la Economia:</strong> reflexiones economicas dispersas desde la Antiguedad (Xenofonte, Aristoteles) y la Edad Media, sin un cuerpo teorico sistematico ni metodo propio. Incluye el Mercantilismo y la Fisiocracia como corrientes de transicion.</li>
+      <li><strong>Escuelas clasicas:</strong> nacen con Adam Smith y se consolidan con David Ricardo, Malthus y sus seguidores, aportando el primer cuerpo sistematico y metodico de teoria economica, con base en la observacion de la Revolucion Industrial.</li>
+      <li><strong>Fase cientifica moderna:</strong> incluye la Escuela Neoclasica, la Escuela de Viena o Sicologica Austriaca, la Escuela de Lausanne o Matematica, la Escuela de Cambridge, la Escuela Neoclasica Sueca, la Escuela Institucionalista, la Escuela del Bienestar, la Revolucion Keynesiana, el Marxismo como corriente critica, y finalmente la fase actual representada por la <strong>Economia Social de Mercado</strong>.</li>
+    </ul>
   </div>
 
   <div class="concepto">
     <h3>El Mercantilismo</h3>
-    <p>Corriente de pensamiento (siglos XV-XVIII) que identificaba la riqueza de una nación con la acumulación de metales preciosos (oro y plata), promoviendo una balanza comercial favorable mediante exportaciones y restricciones a las importaciones. Fue la primera doctrina económica sistemática ligada al poder del Estado-nación.</p>
+    <p>Corriente de pensamiento (siglos XV-XVIII) que identificaba la riqueza de una nacion con la acumulacion de metales preciosos (oro y plata), promoviendo una balanza comercial favorable mediante exportaciones y restricciones a las importaciones. Fue la primera doctrina economica sistematica ligada al poder del Estado-nacion, aunque el libro la ubica todavia dentro de las fases pre-cientificas por carecer de metodo riguroso.</p>
   </div>
 
   <div class="concepto">
-    <h3>La creación científica de la Economía y la Fisiocracia</h3>
-    <p>Los <strong>fisiócratas</strong> franceses (con Quesnay a la cabeza) sostenían que la única fuente real de riqueza era la <strong>tierra</strong> y la agricultura, oponiéndose al mercantilismo. Acuñaron la idea del "orden natural" y el principio de <em>laissez faire, laissez passer</em>, que luego retomaría la Escuela Clásica.</p>
+    <h3>La Fisiocracia</h3>
+    <p>Los <strong>fisiocratas</strong> franceses (con Quesnay a la cabeza) sostenian que la unica fuente real de riqueza era la <strong>tierra</strong> y la agricultura, oponiendose al mercantilismo. Acunaron la idea del "orden natural" y el principio de <em>laissez faire, laissez passer</em>, que luego retomaria la Escuela Clasica. Es considerada el puente entre las fases pre-cientificas y la creacion cientifica de la Economia.</p>
   </div>
 
   <div class="concepto">
-    <h3>La Escuela Clásica</h3>
-    <p>Fundada por <strong>Adam Smith</strong> con su obra <em>"La riqueza de las naciones"</em> (1776), defendió la libre concurrencia, el libre cambio y la "mano invisible" del mercado. David Ricardo profundizó la teorización con enfoque deductivo. Esta escuela sostenía que el Estado debía limitarse a justicia, educación, defensa y obras públicas, sin intervenir en la producción.</p>
+    <h3>La Escuela Clasica</h3>
+    <p>Fundada por <strong>Adam Smith</strong> con su obra <em>"La riqueza de las naciones"</em> (1776), defendio la libre concurrencia, el libre cambio y la "mano invisible" del mercado. David Ricardo profundizo la teorizacion con enfoque deductivo. Esta escuela sostenia que el Estado debia limitarse a justicia, educacion, defensa y obras publicas, sin intervenir en la produccion.</p>
   </div>
 
   <div class="concepto">
-    <h3>La Escuela Neoclásica</h3>
-    <p>Incorporó el análisis marginalista (utilidad marginal, teoría del valor-utilidad) y métodos matemáticos más rigurosos. El libro menciona también corrientes asociadas o posteriores como la <strong>Escuela de Viena o Austríaca</strong>, la <strong>Escuela de Lausanne o Matemática</strong>, la <strong>Escuela de Cambridge</strong>, la <strong>Escuela Sueca</strong>, la <strong>Escuela Institucionalista</strong> y la <strong>Escuela del Bienestar</strong>, todas aportando matices al pensamiento económico moderno.</p>
+    <h3>La Escuela Neoclasica</h3>
+    <p>Incorporo el analisis marginalista (utilidad marginal, teoria del valor-utilidad) y metodos matematicos mas rigurosos. El libro menciona tambien corrientes asociadas como la <strong>Escuela de Viena o Austriaca</strong>, la <strong>Escuela de Lausanne o Matematica</strong>, la <strong>Escuela de Cambridge</strong>, la <strong>Escuela Sueca</strong>, la <strong>Escuela Institucionalista</strong> y la <strong>Escuela del Bienestar</strong>.</p>
   </div>
 
   <div class="concepto">
-    <h3>La Revolución Keynesiana</h3>
-    <p>Con <strong>John Maynard Keynes</strong> y su obra <em>"Teoría General de la ocupación, el interés y el dinero"</em>, se cuestionó la capacidad del mercado para autorregularse y alcanzar el pleno empleo por sí solo. Keynes justificó la <strong>intervención activa del Estado</strong> mediante política fiscal y monetaria para sostener la demanda agregada, especialmente en épocas de crisis y desempleo, marcando un antes y un después en la macroeconomía.</p>
+    <h3>La Revolucion Keynesiana</h3>
+    <p>Con <strong>John Maynard Keynes</strong> y su obra <em>"Teoria General de la ocupacion, el interes y el dinero"</em>, se cuestiono la capacidad del mercado para autorregularse y alcanzar el pleno empleo por si solo. Keynes justifico la <strong>intervencion activa del Estado</strong> mediante politica fiscal y monetaria para sostener la demanda agregada, marcando un antes y un despues en la macroeconomia.</p>
+  </div>
+
+  <div class="concepto nuevo">
+    <h3>Economia Social de Mercado</h3>
+    <p>El propio prologuista del libro, el Prof. Dr. Marco Antonio Elizeche, destaca como uno de los aportes originales de esta obra "el desarrollo de la <strong>Economia Social de Mercado</strong> como vertiente moderna que trata de morigerar los rigores de la economia capitalista". En el indice del libro figura explicitamente como "la fase actual de la ciencia economica".</p>
+    <p>Se trata de un modelo intermedio entre el liberalismo puro de la economia de mercado y la planificacion central: mantiene la libre iniciativa privada, la propiedad y el mecanismo de precios del mercado, pero incorpora una intervencion estatal moderada orientada a corregir las desigualdades sociales y "morigerar" (suavizar) los efectos mas duros del capitalismo, sin caer en la supresion de la libre empresa ni en la socializacion total de los medios de produccion.</p>
   </div>
 </section>
 
 <!-- LECCION III -->
 <section id="leccion3">
-  <span class="badge">LECCIÓN III</span>
+  <span class="badge">LECCION III</span>
   <h2>Las Necesidades Humanas, los Bienes y los Servicios</h2>
 
   <div class="concepto">
     <h3>Necesidades humanas</h3>
     <ul>
-      <li><strong>Primarias:</strong> indispensables para la subsistencia (alimentación, vivienda, vestido).</li>
-      <li><strong>Secundarias:</strong> surgen con el progreso y el nivel de vida (comodidades, educación, entretenimiento).</li>
+      <li><strong>Primarias:</strong> indispensables para la subsistencia (alimentacion, vivienda, vestido).</li>
+      <li><strong>Secundarias:</strong> surgen con el progreso y el nivel de vida (comodidades, educacion, entretenimiento).</li>
       <li><strong>Materiales:</strong> se satisfacen con bienes tangibles (un auto, una vivienda).</li>
-      <li><strong>Inmateriales:</strong> se satisfacen con servicios o bienes abstractos (educación, seguridad, salud).</li>
+      <li><strong>Inmateriales:</strong> se satisfacen con servicios o bienes abstractos (educacion, seguridad, salud).</li>
     </ul>
-    <p>El libro destaca que las necesidades son <strong>ilimitadas</strong> y se renuevan constantemente: aun resolviendo unas, surgen nuevas exigencias de bienestar, lo cual perpetúa el problema de la escasez.</p>
+    <p>Las necesidades son <strong>ilimitadas</strong> y se renuevan constantemente: aun resolviendo unas, surgen nuevas exigencias de bienestar, lo cual perpetua el problema de la escasez.</p>
   </div>
 
   <div class="concepto">
-    <h3>Los bienes económicos: noción</h3>
-    <p>Son aquellas cosas capaces de satisfacer necesidades humanas y que, por ser <strong>escasas</strong> en relación a la demanda, requieren esfuerzo para obtenerse (a diferencia de los bienes libres como el aire, que no exigen esfuerzo económico).</p>
+    <h3>Los bienes economicos: nocion</h3>
+    <p>Son aquellas cosas capaces de satisfacer necesidades humanas y que, por ser <strong>escasas</strong> en relacion a la demanda, requieren esfuerzo para obtenerse (ver tambien el recuadro de <strong>bienes economicos y libres</strong> en la Leccion I, donde se compara este concepto con los bienes libres que no requieren esfuerzo productivo).</p>
   </div>
 
   <div class="concepto">
-    <h3>Clasificación de los bienes económicos</h3>
+    <h3>Clasificacion de los bienes economicos</h3>
     <ul>
-      <li><strong>Materiales e inmateriales:</strong> según sean tangibles (una silla) o abstractos (un servicio).</li>
-      <li><strong>De consumo y de producción:</strong> los primeros satisfacen necesidades directamente; los segundos (factores) sirven para producir otros bienes.</li>
-      <li><strong>Elementales:</strong> bienes básicos usados de manera aislada para satisfacer una necesidad.</li>
-      <li><strong>Complementarios:</strong> se necesitan en conjunto para cumplir su función (por ejemplo, un vehículo y el combustible).</li>
-      <li><strong>Sustituibles:</strong> pueden reemplazarse entre sí para satisfacer la misma necesidad.</li>
-      <li><strong>Sucedáneos:</strong> bienes que suplen a otro cuando este falta o es más caro, cumpliendo una función similar.</li>
+      <li><strong>Materiales e inmateriales:</strong> segun sean tangibles (una silla) o abstractos (un servicio).</li>
+      <li><strong>De consumo y de produccion:</strong> los primeros satisfacen necesidades directamente; los segundos (factores) sirven para producir otros bienes.</li>
+      <li><strong>Elementales:</strong> bienes basicos usados de manera aislada para satisfacer una necesidad.</li>
+      <li><strong>Complementarios:</strong> se necesitan en conjunto para cumplir su funcion (por ejemplo, un vehiculo y el combustible).</li>
+      <li><strong>Sustituibles:</strong> pueden reemplazarse entre si para satisfacer la misma necesidad.</li>
+      <li><strong>Sucedaneos:</strong> bienes que suplen a otro cuando este falta o es mas caro, cumpliendo una funcion similar.</li>
     </ul>
   </div>
 
   <div class="concepto">
     <h3>Los servicios</h3>
-    <p>Son prestaciones <strong>inmateriales</strong> que generan utilidad sin traducirse en un bien físico: el trabajo de un médico, un profesor o un abogado. El libro aclara que "producir" no es solo fabricar cosas, sino también prestar cualquier servicio que ofrezca utilidad, ya sea para el consumo directo o como apoyo a otra producción.</p>
+    <p>Son prestaciones <strong>inmateriales</strong> que generan utilidad sin traducirse en un bien fisico: el trabajo de un medico, un profesor o un abogado. "Producir" no es solo fabricar cosas, sino tambien prestar cualquier servicio que ofrezca utilidad.</p>
   </div>
 </section>
 
 <!-- LECCION IV -->
 <section id="leccion4">
-  <span class="badge">LECCIÓN IV</span>
-  <h2>La Utilidad y el Valor Económico</h2>
+  <span class="badge">LECCION IV</span>
+  <h2>La Utilidad y el Valor Economico</h2>
 
   <div class="concepto">
     <h3>Concepto de utilidad</h3>
-    <p>La <strong>Utilidad</strong>, en economía, es la capacidad que tiene un bien de satisfacer necesidades humanas, ya sean materiales (un automóvil, dinero) o inmateriales (un servicio médico o educativo). No es un juicio moral, sino la aptitud objetiva del bien para cubrir una necesidad.</p>
+    <p>La <strong>Utilidad</strong>, en economia, es la capacidad que tiene un bien de satisfacer necesidades humanas, ya sean materiales (un automovil, dinero) o inmateriales (un servicio medico o educativo).</p>
   </div>
 
   <div class="concepto">
-    <h3>Teoría de la escasez y la abundancia de bienes</h3>
-    <p>El valor y la utilidad de un bien están condicionados por su disponibilidad relativa: cuando un bien es <strong>escaso</strong> respecto a la necesidad que satisface, adquiere mayor valor económico; cuando es <strong>abundante</strong>, su valor tiende a disminuir, incluso si conserva su utilidad esencial (como ocurre con el agua en zonas de abundancia frente a zonas de escasez).</p>
+    <h3>Teoria de la escasez y la abundancia de bienes</h3>
+    <p>El valor y la utilidad de un bien estan condicionados por su disponibilidad relativa: cuando un bien es <strong>escaso</strong> respecto a la necesidad que satisface, adquiere mayor valor economico; cuando es <strong>abundante</strong>, su valor tiende a disminuir, incluso si conserva su utilidad esencial.</p>
   </div>
 
   <div class="concepto">
     <h3>Cantidad y calidad de los bienes</h3>
-    <p>La utilidad de un bien depende no solo de cuánto se tiene disponible (cantidad), sino también de sus características intrínsecas (calidad), factores que en conjunto determinan qué tan bien se satisface una necesidad específica.</p>
+    <p>La utilidad de un bien depende no solo de cuanto se tiene disponible (cantidad), sino tambien de sus caracteristicas intrinsecas (calidad).</p>
   </div>
 
   <div class="concepto">
-    <h3>La teoría marginalista</h3>
-    <p>Sostiene que el valor de un bien no depende de su utilidad total, sino de la <strong>utilidad marginal</strong>: la utilidad que aporta la última unidad consumida de ese bien. A medida que se consumen más unidades de un bien, la utilidad adicional que reporta cada nueva unidad tiende a decrecer. Esta idea revolucionó el pensamiento económico neoclásico al explicar por qué bienes esenciales (como el agua) pueden valer menos que bienes de lujo (como los diamantes) cuando el agua es abundante.</p>
+    <h3>La teoria marginalista</h3>
+    <p>Sostiene que el valor de un bien no depende de su utilidad total, sino de la <strong>utilidad marginal</strong>: la utilidad que aporta la ultima unidad consumida de ese bien. A medida que se consumen mas unidades, la utilidad adicional que reporta cada nueva unidad tiende a decrecer.</p>
   </div>
 
-  <div class="concepto">
-    <h3>El valor económico: nociones</h3>
-    <p>El <strong>valor</strong> expresa la importancia económica que se atribuye a un bien, generalmente medida en términos de otros bienes o de dinero (precio).</p>
+  <div class="concepto nuevo">
+    <h3>El valor economico y la Teoria del Valor-Trabajo</h3>
+    <p>El <strong>valor</strong> expresa la importancia economica que se atribuye a un bien. El libro (indice del Capitulo IV) distingue explicitamente entre la <strong>Teoria del Valor-Trabajo</strong> y la <strong>Teoria del Valor-Utilidad</strong>, ademas de una critica a ambas y una teoria intermedia:</p>
     <ul>
-      <li><strong>Teoría del valor-utilidad:</strong> sostiene que el valor de un bien deriva de su capacidad para satisfacer necesidades (utilidad), enfoque asociado a la escuela marginalista/neoclásica.</li>
-      <li><strong>Teoría intermedia:</strong> combina elementos de utilidad y de costo/trabajo para explicar el valor, reconociendo que ni la utilidad pura ni el costo de producción explican por sí solos el valor de un bien en el mercado.</li>
+      <li><strong>Teoria del Valor-Trabajo (Escuela Clasica):</strong> Adam Smith distinguia que en una economia primitiva, sin bienes ni propiedades, todo el producto resulta del factor <mark class="destacado">trabajo</mark>, por lo que la reparticion se reduce a distribuir el producto proporcionalmente al trabajo realizado por cada uno. En una economia mas adelantada, el producto nacional resulta de la accion combinada de varios factores (tierra, trabajo, capital), pero el valor de un bien sigue explicandose, en esta tradicion clasica, principalmente por la cantidad de trabajo incorporado en su produccion. David Ricardo conservo esta idea, sosteniendo tres tipos de rentas (renta de la tierra, salario, beneficio e intereses) y vinculando el valor al trabajo necesario para producir el bien. Karl Marx llevaria esta teoria a su maxima expresion con el concepto de <strong>plusvalia</strong>: el capitalista se apropiaria del excedente de trabajo del asalariado no pagado en su salario.</li>
+      <li><strong>Teoria del Valor-Utilidad (marginalista):</strong> sostiene que el valor de un bien deriva de su capacidad para satisfacer necesidades (utilidad marginal), enfoque que rebatiria precisamente la teoria del valor-trabajo y la nocion marxista de plusvalia.</li>
+      <li><strong>Critica a ambas teorias y Teoria intermedia:</strong> el libro reconoce que ni el trabajo incorporado ni la utilidad pura explican por si solos el valor de un bien en el mercado real, proponiendo una vision intermedia que combina ambos elementos.</li>
     </ul>
   </div>
 </section>
 
 <!-- LECCION V -->
 <section id="leccion5">
-  <span class="badge">LECCIÓN V</span>
-  <h2>La Producción</h2>
+  <span class="badge">LECCION V</span>
+  <h2>La Produccion</h2>
 
   <div class="concepto">
-    <h3>Teoría de la producción: concepto básico</h3>
-    <p>Producir no es solo "hacer cosas útiles": comprende también prestar cualquier servicio que ofrezca utilidad. En palabras del libro: <span class="cita">"Producir es crear utilidades: utilidades incrustadas en bienes y utilidades encarnadas en servicios."</span> La teoría de la producción sirve de base para el análisis de costos, precios y del empleo de los factores productivos.</p>
+    <h3>Teoria de la produccion: concepto basico</h3>
+    <p>Producir no es solo "hacer cosas utiles": comprende tambien prestar cualquier servicio que ofrezca utilidad. En palabras del libro: <span class="cita">"Producir es crear utilidades: utilidades incrustadas en bienes y utilidades encarnadas en servicios."</span></p>
   </div>
 
   <div class="concepto">
-    <h3>Factores de la producción</h3>
-    <p>Desde los primeros economistas se distinguen tres agentes clásicos —tierra, trabajo y capital— a los que hoy se agrega la organización o empresa, y en esta obra también la tecnología:</p>
+    <h3>Factores de la produccion</h3>
     <ul>
-      <li><strong>Naturaleza (tierra):</strong> conjunto de recursos naturales -minerales, vegetales, animales, atmosféricos- que el hombre aprovecha. Incluye conceptos como "espacio económico" y las limitaciones geográficas de cada país.</li>
-      <li><strong>Trabajo:</strong> conjunto de facultades físicas y mentales que el hombre ejerce en la producción. Se clasifica en individual/social, simple/complejo, y manual/de invención/de dirección (Charles Gide).</li>
-      <li><strong>Capital:</strong> bienes que son producto del trabajo aplicado sobre la naturaleza. Se clasifica en activos y pasivos (según función técnica), fijos y circulantes (Adam Smith), o privado y social (escuela austríaca).</li>
-      <li><strong>Empresa u organización:</strong> combina los demás factores con la finalidad de crear bienes y servicios útiles; es la función del empresario.</li>
-      <li><strong>Tecnología:</strong> conocimiento humano aplicado a la producción; puede innovar el proceso productivo o el producto en sí, elevando la productividad del trabajo.</li>
+      <li><strong>Naturaleza (tierra):</strong> conjunto de recursos naturales que el hombre aprovecha.</li>
+      <li><strong>Trabajo:</strong> conjunto de facultades fisicas y mentales que el hombre ejerce en la produccion.</li>
+      <li><strong>Capital:</strong> bienes que son producto del trabajo aplicado sobre la naturaleza.</li>
+      <li><strong>Empresa u organizacion:</strong> combina los demas factores con la finalidad de crear bienes y servicios utiles.</li>
+      <li><strong>Tecnologia:</strong> conocimiento humano aplicado a la produccion.</li>
     </ul>
   </div>
 
   <div class="concepto">
-    <h3>Función de la producción</h3>
-    <p>La función de producción de una empresa muestra la <strong>cantidad máxima de producción</strong> que puede obtenerse con una cantidad dada de factores. Su elección exige primero una decisión técnica (proceso técnicamente eficiente) y luego una decisión económica (el proceso de menor costo entre los técnicamente eficientes).</p>
+    <h3>Funcion de la produccion</h3>
+    <p>La funcion de produccion de una empresa muestra la <strong>cantidad maxima de produccion</strong> que puede obtenerse con una cantidad dada de factores. Su eleccion exige primero una decision tecnica y luego una decision economica (el proceso de menor costo entre los tecnicamente eficientes).</p>
   </div>
 
-  <div class="concepto">
-    <h3>Producción y productividad</h3>
-    <p>La <strong>productividad</strong> es la relación entre la cantidad de un factor (o factores) empleado en la producción y la cantidad de producto obtenido. Una alta productividad implica lograr el máximo de producto con el mínimo uso de factores. El desarrollo económico, especialmente en sus formas más aceleradas, es fruto del aumento sostenido de la productividad.</p>
+  <div class="concepto nuevo">
+    <h3>Produccion y productividad</h3>
+    <p>La <strong>productividad</strong>, en sentido estricto, es el producto de una unidad de un factor de produccion en un periodo determinado; en sentido generico, es el rendimiento medido en unidades de producto que se obtiene de la aplicacion de los factores. Es, en definitiva, una <mark class="destacado">relacion entre la cantidad de un factor (o factores) usado en la produccion y la cantidad del producto obtenido</mark>. Una alta productividad significa lograr el maximo de producto con el minimo uso de factores.</p>
+    <p>El libro ilustra esto con el ejemplo de dos operarios, A y B, con el mismo equipo y horario: si A produce mas cosas utiles que B al final del dia, se dice que A tiene mayor productividad que B. Esta apreciacion no solo aplica al trabajo, sino a cualquier factor: hay tierras mas productivas que otras, capitales que rinden mas, maquinas que producen mas. El <strong>desarrollo economico</strong>, sobre todo en sus formas mas aceleradas, es fruto directo del aumento sostenido de la productividad, logrado mediante el perfeccionamiento de los factores de produccion y la modernizacion de equipos.</p>
   </div>
 
-  <div class="concepto">
-    <h3>Ley de los rendimientos decrecientes</h3>
-    <p>También llamada <strong>ley de proporción de los factores</strong>, establece que si se mantienen fijas las cantidades de algunos factores, el producto marginal de un factor variable (por ejemplo, el trabajo) disminuirá, pasado cierto nivel, a medida que aumenta la cantidad de ese factor.</p>
-    <p class="cita">"...si a una cantidad dada de un factor... se aplican dosis crecientes de otro factor... la cantidad del producto... crecerá, primero más que proporcionalmente; luego menos que proporcionalmente y, por último, decrecerá."</p>
-    <p>El libro ilustra esto con el ejemplo clásico de una siembra de maíz: al aumentar progresivamente la cantidad de semilla sobre una hectárea fija de tierra, la cosecha primero crece más que proporcionalmente, luego menos, y finalmente comienza a decrecer. Este principio, originado en la agricultura, se aplica en general a cualquier combinación de factor fijo y factor variable.</p>
+  <div class="concepto nuevo">
+    <h3>Ley de los Rendimientos Decrecientes</h3>
+    <p>Tambien llamada <strong>ley de proporcion de los factores</strong>, establece que si se mantienen fijas las cantidades de algunos factores, el producto marginal de un factor variable (por ejemplo, el trabajo o el capital) disminuira, pasado cierto nivel, a medida que aumenta la cantidad de ese factor.</p>
+    <p class="cita">"...si a una cantidad dada de un factor... se aplican dosis crecientes de otro factor... la cantidad del producto... crecera, primero mas que proporcionalmente; luego menos que proporcionalmente y, por ultimo, decrecera."</p>
+    <p>El libro ilustra esto con el ejemplo clasico de una siembra de maiz sobre una hectarea fija de tierra (factor fijo) a la que se aplican dosis crecientes de semilla (factor variable). El proceso completo atraviesa <mark class="destacado">tres etapas</mark>: (I) aumento del producto mas que proporcional a la semilla sembrada; (II) aumento menos que proporcional; y (III) decrecimiento absoluto de la cosecha, por mucha semilla adicional que se emplee. La combinacion mas racional de factores siempre se ubica dentro de la segunda etapa, ya que continuar aumentando el factor variable mas alla de ese punto no tiene sentido economico, aunque el insumo fuera gratuito. Esta ley, originalmente observada en la agricultura, se aplica hoy en general a cualquier combinacion de un factor fijo y un factor variable en cualquier proceso productivo.</p>
   </div>
 </section>
 
 <!-- QUIZ -->
 <section id="quiz">
-  <h2>✅ Autoevaluación de selección múltiple</h2>
+  <h2>Autoevaluacion de seleccion multiple</h2>
   <p>Responde las siguientes preguntas y presiona <strong>"Corregir"</strong> para ver tu resultado.</p>
   <div id="preguntas"></div>
   <button id="corregir">Corregir respuestas</button>
@@ -477,121 +548,121 @@
 </main>
 
 <footer>
-  Material de estudio elaborado en base a: Rivarola Paoli, Juan Bautista. <em>Economía Política</em>, 8ª ed., Asunción, Ediciones y Arte S.A., 2010. — Uso educativo y colaborativo.
+  Material de estudio elaborado en base a: Rivarola Paoli, Juan Bautista. <em>Economia Politica</em>, 8a ed., Asuncion, Ediciones y Arte S.A., 2010. Uso educativo y colaborativo.
 </footer>
 
-<a href="#" class="top-btn" title="Volver arriba">↑</a>
+<a href="#" class="top-btn" title="Volver arriba">&uarr;</a>
 
 <script>
 const preguntas = [
   {
-    q: "1. ¿De qué palabras griegas proviene el término 'Economía'?",
-    opciones: ["Oikos (casa) y Nomos (ley)", "Ergon (trabajo) y Nomos (ley)", "Polis (ciudad) y Oikos (casa)", "Chrema (dinero) y Logos (estudio)"],
-    correcta: 0
-  },
-  {
-    q: "2. Según Raymond Barre, la Economía Política es la ciencia de...",
-    opciones: ["la producción industrial", "la administración de recursos escasos", "el intercambio internacional", "la acumulación de metales preciosos"],
+    q: "1. Un bien que la naturaleza ofrece en cantidad suficiente para todos, sin requerir esfuerzo productivo, se llama:",
+    opciones: ["Bien economico", "Bien libre", "Bien complementario", "Bien sucedaneo"],
     correcta: 1
   },
   {
-    q: "3. ¿Cuál de las siguientes NO es una división clásica de la Economía Política según el libro?",
-    opciones: ["Producción", "Distribución", "Circulación", "Legislación"],
-    correcta: 3
-  },
-  {
-    q: "4. ¿Cuáles son los tres problemas económicos básicos planteados?",
+    q: "2. Los cuatro problemas economicos basicos planteados en el libro son:",
     opciones: [
-      "Qué producir, cómo producir, para quién producir",
-      "Cuándo producir, dónde producir, por qué producir",
-      "Cuánto ahorrar, cuánto invertir, cuánto exportar",
-      "Cómo importar, cómo exportar, cómo financiar"
+      "Que y cuanto, como, cuando y para quien producir",
+      "Donde, cuando, con quien y por que producir",
+      "Cuanto ahorrar, cuanto invertir, cuanto exportar y cuanto importar",
+      "Como importar, como exportar, como financiar y como ahorrar"
     ],
     correcta: 0
   },
   {
-    q: "5. La corriente que identificaba la riqueza nacional con la acumulación de oro y plata es:",
-    opciones: ["La Fisiocracia", "El Mercantilismo", "La Escuela Clásica", "El Keynesianismo"],
+    q: "3. El metodo que parte de la observacion de la realidad para obtener principios generales se llama:",
+    opciones: ["Metodo deductivo", "Metodo inductivo", "Metodo estadistico", "Metodo marginalista"],
     correcta: 1
   },
   {
-    q: "6. ¿Qué escuela sostenía que la tierra era la única fuente real de riqueza?",
-    opciones: ["Escuela Neoclásica", "Escuela Institucionalista", "La Fisiocracia", "Escuela de Cambridge"],
+    q: "4. El metodo que emplea deducciones logicas a partir de axiomas, sin recurrir a la observacion empirica directa, se llama:",
+    opciones: ["Metodo inductivo", "Metodo deductivo", "Metodo econometrico", "Metodo historico"],
+    correcta: 1
+  },
+  {
+    q: "5. Segun el indice del libro, las escuelas del pensamiento economico se organizan en:",
+    opciones: [
+      "Fases pre-cientificas, Escuela Clasica y escuelas de la fase cientifica moderna",
+      "Solo Escuela Clasica y Escuela Neoclasica",
+      "Solo Mercantilismo y Fisiocracia",
+      "Escuela Austriaca y Escuela Sueca unicamente"
+    ],
+    correcta: 0
+  },
+  {
+    q: "6. La corriente que identificaba la riqueza nacional con la acumulacion de oro y plata es:",
+    opciones: ["La Fisiocracia", "El Mercantilismo", "La Escuela Clasica", "El Keynesianismo"],
+    correcta: 1
+  },
+  {
+    q: "7. Que escuela sostenia que la tierra era la unica fuente real de riqueza?",
+    opciones: ["Escuela Neoclasica", "Escuela Institucionalista", "La Fisiocracia", "Escuela de Cambridge"],
     correcta: 2
   },
   {
-    q: "7. La 'Revolución Keynesiana' se caracteriza principalmente por defender:",
+    q: "8. La Economia Social de Mercado, segun el prologo del libro, busca principalmente:",
     opciones: [
-      "la eliminación total del Estado en la economía",
-      "la intervención activa del Estado para sostener la demanda agregada",
-      "el regreso al patrón oro",
-      "la planificación central absoluta"
+      "eliminar completamente el mercado y la propiedad privada",
+      "morigerar (suavizar) los rigores de la economia capitalista sin eliminar el mercado",
+      "regresar al mercantilismo",
+      "aplicar unicamente la planificacion central sovietica"
     ],
     correcta: 1
   },
   {
-    q: "8. Un bien que se necesita usar en conjunto con otro para cumplir su función (como el auto y el combustible) se llama:",
-    opciones: ["Bien sucedáneo", "Bien sustituible", "Bien complementario", "Bien elemental"],
+    q: "9. Segun la Teoria del Valor-Trabajo de la Escuela Clasica, el valor de un bien se explica principalmente por:",
+    opciones: [
+      "la utilidad marginal que reporta al consumidor",
+      "la cantidad de trabajo incorporado en su produccion",
+      "el precio fijado arbitrariamente por el Estado",
+      "la escasez absoluta del bien en el mercado"
+    ],
+    correcta: 1
+  },
+  {
+    q: "10. Que economista lleva la Teoria del Valor-Trabajo a su maxima expresion con el concepto de 'plusvalia'?",
+    opciones: ["Adam Smith", "David Ricardo", "Karl Marx", "John Maynard Keynes"],
     correcta: 2
   },
   {
-    q: "9. Las necesidades que surgen con el progreso y el aumento del nivel de vida (no indispensables para la subsistencia) se llaman:",
-    opciones: ["Necesidades primarias", "Necesidades secundarias", "Necesidades materiales", "Necesidades inelásticas"],
-    correcta: 1
-  },
-  {
-    q: "10. La teoría marginalista explica el valor de un bien a partir de:",
+    q: "11. La division didactica de la ciencia economica en Microeconomia, Macroeconomia, Desarrollo Economico y Economia Internacional corresponde a:",
     opciones: [
-      "el costo total de producción",
-      "la utilidad de la última unidad consumida (utilidad marginal)",
-      "la cantidad de trabajo incorporado únicamente",
-      "el precio fijado por el Estado"
+      "las cuatro fases del capitalismo",
+      "la division didactica del estudio de la Economia Politica",
+      "las cuatro escuelas clasicas",
+      "los cuatro factores de produccion"
     ],
     correcta: 1
   },
   {
-    q: "11. Según el libro, 'producir' significa:",
-    opciones: [
-      "solo fabricar bienes materiales tangibles",
-      "crear utilidades, tanto en bienes como en servicios",
-      "únicamente extraer recursos naturales",
-      "acumular capital financiero"
-    ],
-    correcta: 1
-  },
-  {
-    q: "12. ¿Cuáles son los factores de la producción mencionados en el libro?",
-    opciones: [
-      "Tierra, trabajo, capital y organización (empresa), incluyendo la tecnología",
-      "Solo tierra y trabajo",
-      "Dinero, crédito y bancos",
-      "Oferta, demanda y precio"
-    ],
-    correcta: 0
-  },
-  {
-    q: "13. La productividad se define como:",
+    q: "12. La productividad se define como:",
     opciones: [
       "la cantidad total de dinero invertido en una empresa",
-      "la relación entre la cantidad de un factor usado y la cantidad de producto obtenido",
-      "el número total de trabajadores de un país",
+      "la relacion entre la cantidad de un factor usado y la cantidad de producto obtenido",
+      "el numero total de trabajadores de un pais",
       "el precio de mercado de un bien"
     ],
     correcta: 1
   },
   {
-    q: "14. La Ley de los Rendimientos Decrecientes indica que, manteniendo fijo un factor, al aumentar dosis del factor variable el producto...",
+    q: "13. La Ley de los Rendimientos Decrecientes indica que, manteniendo fijo un factor, al aumentar dosis del factor variable el producto...",
     opciones: [
-      "siempre crece en la misma proporción",
-      "primero crece más que proporcionalmente, luego menos, y finalmente decrece",
-      "decrece desde el principio sin excepción",
+      "siempre crece en la misma proporcion",
+      "primero crece mas que proporcionalmente, luego menos, y finalmente decrece",
+      "decrece desde el principio sin excepcion",
       "permanece siempre constante"
     ],
     correcta: 1
   },
   {
-    q: "15. ¿Qué disciplina cuantifica y representa numéricamente las relaciones económicas combinando teoría económica, matemática y estadística?",
-    opciones: ["La Contabilidad", "La Econometría", "La Demografía", "La Sociología"],
+    q: "14. En el ejemplo de la siembra de maiz usado para explicar la ley de rendimientos decrecientes, el factor FIJO es:",
+    opciones: ["La semilla", "La tierra", "El trabajo", "El capital"],
+    correcta: 1
+  },
+  {
+    q: "15. Segun Raymond Barre, la Economia Politica es la ciencia de:",
+    opciones: ["la produccion industrial", "la administracion de recursos escasos", "el intercambio internacional", "la acumulacion de metales preciosos"],
     correcta: 1
   }
 ];
